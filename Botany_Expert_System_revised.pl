@@ -54,7 +54,8 @@ identify(unknown).
 							check('three leaf groupings').
 'Redwood Sorrel' 		:- 	herb,
 							check('heart shaped leaves').
-'Salal Berry'	 		:- 	berry,
+'Salal Berry'	 		:- 	herb,
+							berry,
 							check('glossy leaves'),
 							check('lantern-shaped flowers').
 'Red Huckleberry'		:- 	shrub,
