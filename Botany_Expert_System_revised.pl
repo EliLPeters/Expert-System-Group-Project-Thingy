@@ -20,6 +20,18 @@ identify('Salal Berry')            :- 'Salal Berry', !.
 identify('Red Huckleberry')        :- 'Red Huckleberry', !.
 identify('Evergreen Huckleberry')  :- 'Evergreen Huckleberry', !.
 identify('Cobra Lily')             :- 'Cobra Lily', !.
+identify('Thimbleberry')           :- 'Thimbleberry', !.
+identify('Blackberry')             :- 'Blackberry', !.
+identify('Oregon Grape')           :- 'Oregon Grape', !.
+identify('Cattail')                :- 'Cattail', !.
+identify('Fetid Adderstongue')     :- 'Fetid Adderstongue', !.
+identify('California Wildrose')    :- 'California Wildrose', !.
+identify('Deerfern')               :- 'Deerfern', !.
+identify('Swordfern')              :- 'Swordfern', !.
+identify('Leather Fern')           :- 'Leather Fern', !.
+identify('Douglas Iris')           :- 'Douglas Iris', !.
+identify('California Poppy')       :- 'California Poppy', !.
+identify('Blue Flax')              :- 'Blue Flax', !.
 identify(unknown).
 
 % Plant attributes
@@ -68,6 +80,32 @@ identify(unknown).
 							berry,
 							check('serrated leaves'),
 							check('blue fruit').
+'Cattail'				:-  shrub,
+							check('long, narrow leaves'),
+							check('a penchant for wetlands'),
+							check('sausage-on-a-stick-like stems').
+'Fetid Adderstongue'	:-  herb,
+							check('broad leaves'),
+							check('liver-spotted leaves'),
+							check('three-petalled flowers with an unpleasant scent').
+'California Wildrose'	:-  shrub,
+							check('prickly stems'),
+							check('pleasantly-scented pink flowers with five petals').
+'Deerfern'				:-  swordleaf,
+							check('soft fronds').
+'Swordfern'				:-  swordleaf,
+                            check('firm fronds').
+'Leather Fern'			:-  fern,
+							check('rounded leaves').
+'Douglas Iris'			:-  herb,
+							check('a rhizome'),
+							check('purple, white, or yellow flowers with three sepals').
+'California Poppy'		:-  herb,
+							check('feathery leaves'),
+							check('orange, bell-shaped flowers').
+'Blue Flax'				:-  herb,
+							check('silky, blue flowers with five petals'),
+							check('useful fibers').
 
 % Plant Classifications
 tree             :- check('a height greater than 20 feet').
@@ -80,6 +118,10 @@ herb             :- check('a height shorter than 2 feet').
 fruit			 :- check('fruit').
 berry			 :- fruit,
 					check('berries').
+fern			 :- herb,
+                    check('fronds').
+swordleaf		 :- fern,
+					check('sword-shaped fronds').
 
 % Asking questions
 ask(Question) :- write('Does the plant have '),
