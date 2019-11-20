@@ -14,7 +14,7 @@ identify('Douglas Fir')            :- 'Douglas Fir'.
 identify('Big Leaf Maple')         :- 'Big Leaf Maple', !.
 identify('Tanoak')                 :- 'Tanoak', !.
 identify('Rhododendron')           :- 'Rhododendron', !.
-identify('Poison Oak')     		   :- 'Poison Oak', !.
+identify('Poison Oak')             :- 'Poison Oak', !.
 identify('Redwood Sorrel')         :- 'Redwood Sorrel', !.
 identify('Salal Berry')            :- 'Salal Berry', !.
 identify('Red Huckleberry')        :- 'Red Huckleberry', !.
