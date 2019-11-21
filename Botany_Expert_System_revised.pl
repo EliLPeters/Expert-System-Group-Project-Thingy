@@ -126,7 +126,7 @@ swordleaf		 :- fern,
 
 % Asking questions
 ask(Question) :- write('Does the plant have '),
-                 write(Question), write('?  '),
+                 write(Question), write(' (yes/no)? '),
                  read(Answer),
                  nl,
                  (
